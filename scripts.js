@@ -35,11 +35,19 @@ function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
 
+function clearFormFields() {
+    bookTitle.value=''
+    bookAuthor.value ='';
+    bookPages.value = '';
+    
+}
+
 function submitForm() {
 
     addBookToLibary(bookTitle.value, bookAuthor.value, bookPages.value, false);
     updateTable();
     closeForm();
+    clearFormFields();
 
 }
 
@@ -51,6 +59,10 @@ function updateTable() {
 
         let book = myLibrary[i];
 
+        newRow.dataset.libIndex =`${i}`;
+
+
+
         for (key in book) {
 
             let newData = document.createElement('td');
@@ -61,10 +73,31 @@ function updateTable() {
 
         }
 
+        let newData = document.createElement('td');
+
+        newData.innerHTML=`<button onclick='removeBook(${newRow.dataset.libIndex})' class="delBtn">Del</button>`;
+        newRow.appendChild(newData);
+
+        let newData2 = document.createElement('td');
+
+        newData2.innerHTML=`<button onclick='toggleReadStatus(${newRow.dataset.libIndex})' class="toggleBtn">Toggle</button>`;
+        newRow.appendChild(newData2);
+
         tableData.appendChild(newRow);
 
 
     }
 }
 
-addBtn.addEventListener('click', submitForm);
+function removeBook(i) {
+
+    myLibrary.splice(i,1);
+    updateTable();
+
+}
+
+function toggleReadStatus(i) {
+    
+    myLibrary[i].readStatus = !(myLibrary[i].readStatus);
+    updateTable();
+}

@@ -13,13 +13,16 @@
     <body>
         
         <table>
-
+            <caption>My Library</caption>
+            
             <thead>
                 <tr>
                     <th scope="col">Title</th>
                     <th scope="col">Author</th>
                     <th scope="col">Pages</th>
-                    <th scope="col">Read (Y/N)</th>
+                    <th scope="col">Read (T/F)</th>
+                    <th scope="col">Delete</th>
+                    <th scope="col">Toggle Read</th>
                 </tr>
             </thead>
 
@@ -60,7 +63,7 @@
                     <input type="radio" name="read-status" value="false" id="read-status-no"> N
                 </label>
                 
-                <button type="submit" class="add-btn">Add</button>
+                <button onclick="submitForm()" type="button" class="add-btn">Add</button>
 
 
 

@@ -4,7 +4,7 @@
     position: fixed;
     bottom: 23px;
     right: 28px;
-    width: 280px;
+    width: 250px;
 
 }
 
@@ -18,7 +18,7 @@
 }
 
 .form-container {
-    max-width: 300px;
+    max-width: 250px;
     padding: 10px;
     background-color: white;
 }
@@ -27,4 +27,27 @@
     position: relative;
     bottom: 0px;
     right: 0px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+
+th {
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+
+table caption {
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 2px;
+}
+
+body {
+    background-color: antiquewhite;
 }
