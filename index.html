@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Library</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+
+    <body>
+        
+        <table>
+
+            <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Pages</th>
+                    <th scope="col">Read (Y/N)</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+
+        </table>
+
+        <button class="new-book-btn" onclick="openForm()">Add Book</button>
+
+        <div class="form-popup" id="myForm">
+
+            <form class="form-container">
+
+                <label>
+                 
+                    <input type="text" name="book-title" placeholder="Title" id="book-title">
+                </label>
+
+                <label>
+                    
+                    <input type="text" name="book-author" placeholder="Author's Name" id="book-author">
+                </label>
+
+                <label>
+                    
+                   <input type="text" name="book-pages" placeholder="Number of Pages" id="book-pages">
+                </label>
+                <br>
+                <br>
+                Read?
+                <label>
+                    <input type="radio" name="read-status" value="true" id="read-status-yes"> Y
+                </label>
+
+                <label>
+                    <input type="radio" name="read-status" value="false" id="read-status-no"> N
+                </label>
+                
+                <button type="submit" class="add-btn">Add</button>
+
+
+
+            </form>
+
+        </div>
+
+        <script src="scripts.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,30 @@
+
+.new-book-btn {
+
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+.add-btn {
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+}
